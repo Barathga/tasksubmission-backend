@@ -3,7 +3,7 @@ const cors = require("cors");
 const mongo = require('./shared/connect');
 const {Studentsignin,signup} = require('./modules/registermodule');
 
-const authorizeModule = require('./modules/authorize');
+// const authorizeModule = require('./modules/authorize');
 
 const app = express();
 
@@ -16,11 +16,11 @@ app.get('/',(req,res)=>{
 })
 app.post('/signin',Studentsignin);
 app.post('/signup',signup); 
-app.use(authorizeModule.AuthenticateUser);
+// app.use(authorizeModule.AuthenticateUser);
 
 
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 8001;
 
 app.listen(port , function()
 
@@ -29,3 +29,4 @@ app.listen(port , function()
 console.log("Started")
 
 });;
+

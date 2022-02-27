@@ -31,12 +31,3 @@ module.exports.Studentsignin = async(req,res,next) => {
     res.send(token);
 }
 
-// module.exports.userdata=async(req,res,next)=>{
-//     try {
-//         var data = await mongo.db.collection("login").find().toArray();
-//         res.send(data);
-//     } catch(err) {
-//         console.log(err);
-//         res.status(500).send(err);
-//     }
-//  }
